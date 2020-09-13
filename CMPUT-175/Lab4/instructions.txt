@@ -1,0 +1,6 @@
+Complete getAction().  This function prompts the user to enter either a ‘=’ 
+(to enter a new website address), ‘<’ (back button), ‘>’ (forward button), or 
+‘q’ to quit the browser simulation.  If the user enters something other than these 
+4 characters, an error message is displayed before re-prompting for a valid entry.  
+This function has no inputs.  This function returns the valid character entered by the 
+user (str). 
