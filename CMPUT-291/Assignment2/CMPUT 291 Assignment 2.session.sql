@@ -29,7 +29,7 @@ CREATE TABLE posts(
 CREATE TABLE tags(
     pid INTEGER NOT NULL,
     tag TEXT,
-    PRIMARY KEY (pid),
+    PRIMARY KEY (pid,tag),
     FOREIGN KEY (pid) REFERENCES posts(pid)
 );
 CREATE TABLE votes(

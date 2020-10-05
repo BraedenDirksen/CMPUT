@@ -5,8 +5,10 @@ VALUES (1,'braeden','edmonton',DATE('2020-10-04')),
 (4,'mathew','regina',DATE('2020-10-04'));
 
 INSERT INTO posts
-VALUES (1,DATE(2020-10-04),'question post','this is a question post',1),
-(2,DATE(2020-10-04),'answer post','this is a answer post',2);
+VALUES (1,DATE('2020-10-04'),'question post','this is a question post',1),
+(2,DATE('2020-10-05'),'answer post','this is a answer post',2),
+(3,DATE('2020-10-04'),'relational database','this is a answer post',3)
+;
 
 INSERT INTO questions
 VALUES (1,2);
@@ -22,4 +24,8 @@ VALUES ('gold','gold'),
 INSERT INTO ubadges
 VALUES (1,DATE(2020-10-04),'gold'),
 (2,DATE(2020-10-04),'gold'),
-(4,DATE(2020-10-04),'gold')
+(4,DATE(2020-10-04),'gold');
+
+INSERT INTO tags
+VALUES (2,'relational'),
+(2,'database')
