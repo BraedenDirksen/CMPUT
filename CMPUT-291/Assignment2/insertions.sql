@@ -13,7 +13,7 @@ VALUES (1,DATE('2020-10-04'),'question post','this is a question post',1),
 ;
 
 INSERT INTO questions
-VALUES (1,2),(2,5);
+VALUES (1,2),(2,4),(5,NULL);
 
 INSERT INTO answers
 VALUES (2,1),(4,1),(3,5);
@@ -30,4 +30,10 @@ VALUES (1,DATE(2020-10-04),'gold'),
 
 INSERT INTO tags
 VALUES (2,'relational'),
-(2,'database')
+(2,'database');
+
+INSERT INTO votes
+VALUES (5,1,DATE(2020-10-06),1),
+(5,1,DATE(2020-10-06),2),
+(5,1,DATE(2020-10-06),3),
+(5,1,DATE(2020-10-06),4)
