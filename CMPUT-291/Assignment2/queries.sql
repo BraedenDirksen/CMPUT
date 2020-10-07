@@ -60,7 +60,7 @@ WHERE posts.pid = votes.pid);
 
 /*query six */
 
-/*query seven */
+/*query seven INCOMPLETE!!!*/
 
 SELECT tag, pdate
 FROM tags, posts
@@ -97,5 +97,6 @@ SELECT DISTINCT posts.poster as user_id, question_amount, answer_amount, vote_ou
                 group by posts.poster) as v_in
     on posts.poster = v_in.poster
 /*query nine */
+
 
 /*query ten */
