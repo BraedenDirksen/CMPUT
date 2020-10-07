@@ -9,7 +9,7 @@ SELECT poster
 FROM posts
 WHERE pid IN (SELECT pid FROM questions);
 
-/*query two */
+/*query two COMPLETE*/
 SELECT pid, title
 FROM posts
 WHERE title LIKE '%relational database%'
