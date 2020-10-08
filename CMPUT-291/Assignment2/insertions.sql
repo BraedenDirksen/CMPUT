@@ -32,10 +32,14 @@ VALUES (1,DATE(2020-10-04),'gold'),
 
 INSERT INTO tags
 VALUES (2,'relational'),
+(3,'relational'),
+(4,'relational'),
+(5,'relational'),
+(6,'relational'),
 (2,'database');
 
 INSERT INTO votes
 VALUES (5,1,DATE(2020-10-06),1),
-(4,1,DATE(2020-10-06),1),
-(3,1,DATE(2020-10-06),1),
-(5,1,DATE(2020-10-06),2)
+(4,2,DATE(2020-10-06),1),
+(3,3,DATE(2020-10-06),1),
+(2,4,DATE(2020-10-06),2)

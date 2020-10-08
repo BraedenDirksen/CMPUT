@@ -58,15 +58,31 @@ AND 3 <
 FROM posts, votes
 WHERE posts.pid = votes.pid);
 
-/*query six */
+/*query six COMPLETE*/
 
-/*query seven INCOMPLETE!!!*/
+SELECT DISTINCT tags.tag, vote_amount, post_amount
+    FROM tags
+    LEFT JOIN(select DISTINCT tag, COUNT(*) as vote_amount from votes, tags
+            WHERE tags.pid = votes.pid
+            group by tag) as v
+    ON v.tag = tags.tag
+    LEFT JOIN 
+        (SELECT tag, COUNT(*) as post_amount FROM posts, tags
+        WHERE posts.pid = tags.pid
+        group by tag) as p
+        ON p.tag = tags.tag
+    ORDER by vote_amount DESC
+    LIMIT 3;
+/*query seven*/
 
-SELECT tag, pdate
-FROM tags, posts
-WHERE (SELECT DISTINCT pdate
-FROM posts) = pdate 
-AND tags.pid = posts.pid;
+SELECT DISTINCT pdate ,ptag as'most popular tag',aposts as'amount of posts'
+FROM posts
+INNER JOIN (SELECT pdate, tag as ptag, COUNT(*) as aposts
+            FROM posts, tags
+            WHERE posts.pid = tags.pid
+            group by tags.tag
+            ORDER BY count(*) DESC
+            LIMIT 1) USING(pdate);
 
 /*query eight COMPLETE*/
 
