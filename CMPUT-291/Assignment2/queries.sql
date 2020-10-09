@@ -6,19 +6,17 @@ WHERE bname = 'gold'
 INTERSECT
 
 SELECT poster
-FROM posts
-WHERE pid IN (SELECT pid FROM questions);
+FROM posts,questions
+WHERE posts.pid = questions.pid;
 
 /*query two COMPLETE*/
-SELECT pid, title
-FROM posts
+SELECT distinct posts.pid, title
+FROM posts,tags t1, tags t2
 WHERE title LIKE '%relational database%'
-OR (pid IN (SELECT pid
-FROM tags
-WHERE tag LIKE "%relational%")
-AND pid IN (SELECT pid
-FROM tags
-WHERE tag LIKE "%atabase%"));
+OR t1.pid = t2.pid
+AND posts.pid = t1.pid
+AND t1.tag like '%relational%'
+AND t2.tag like '%database%';
 
 /*query three COMPLETE*/
 SELECT p1.pid, p1.pdate
