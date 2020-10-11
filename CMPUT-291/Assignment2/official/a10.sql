@@ -1,4 +1,4 @@
-SELECT DISTINCT users.city, user_amount, gold_amount--, avgMonthly_questions_per_user, votes_per_month
+SELECT DISTINCT users.city, user_amount, gold_amount, avgMonthly_questions_per_user, votes_per_month
     FROM users
     LEFT JOIN(
         SELECT users.city, COUNT(*) AS user_amount
@@ -15,10 +15,17 @@ SELECT DISTINCT users.city, user_amount, gold_amount--, avgMonthly_questions_per
             GROUP BY users.city
         ) AS goldCount ON goldCount.city = users.city
     LEFT JOIN(
-        SELECT users.city, avg(Monthly_questions) AS avgMonthly_questions_per_user
+        SELECT users.city, avg(Monthly_questions_per_user) AS avgMonthly_questions_per_user
             FROM (SELECT DISTINCT uid, count(*) AS Monthly_questions_per_user
                 FROM questioninfo
                 WHERE uid in (SELECT q.uid FROM questioninfo q)
-                GROUP BY uid), users
-            WHERE
+                GROUP BY uid) as mqpu, users
+            WHERE users.uid = mqpu.uid
                 ) AS monthlyquestions ON users.city = monthlyquestions.city
+    LEFT JOIN(
+        SELECT city, votes_per_month
+            FROM users, (SELECT DISTINCT uid, sum(voteCnt) AS votes_per_month
+                FROM questioninfo
+                GROUP BY uid) as u
+            WHERE users.uid = u.uid
+            ) AS mv ON mv.city = users.city
