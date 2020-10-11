@@ -1,3 +1,4 @@
+--BROKEN FIX!!!
 SELECT p1.pid, p1.pdate
 FROM posts p1, posts p2, questions, answers
 WHERE p1.pid = questions.pid

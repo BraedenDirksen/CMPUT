@@ -1,3 +1,4 @@
+--complete and working
 SELECT uid
 FROM ubadges, badges
 WHERE ubadges.bname = badges.bname
