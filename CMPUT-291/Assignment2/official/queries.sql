@@ -111,7 +111,7 @@ SELECT DISTINCT posts.poster as user_id, question_amount, answer_amount, vote_ou
                 group by posts.poster) as v_in
     on posts.poster = v_in.poster;
 /*query nine */
-DROP VIEW questioninfo;
+DROP VIEW IF EXISTS questioninfo;
 
 CREATE VIEW questioninfo(pid,uid,theaid,voteCnt,ansCnt) AS
     SELECT DISTINCT questions.pid,poster,qinfo.theaid, voteCnt, ansCnt
