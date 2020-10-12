@@ -1,4 +1,5 @@
--- complete and working
+.print Question 2 - bdirksen
+-- complete working correctly
 SELECT DISTINCT posts.pid, title
 FROM posts,tags t1, tags t2, questions
 WHERE title LIKE '%relational database%'

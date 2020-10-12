@@ -1,3 +1,5 @@
+.print Question 5 - bdirksen
+--complete working correctly
 SELECT poster
 FROM posts, questions
 WHERE posts.pid = questions.pid
