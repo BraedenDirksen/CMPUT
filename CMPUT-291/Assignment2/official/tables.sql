@@ -64,4 +64,4 @@ create table answers (
   qid		char(4),
   primary key (pid),
   foreign key (qid) references questions
-);
+)
