@@ -1,5 +1,4 @@
 
-DROP VIEW IF EXISTS questioninfo;
 
 CREATE VIEW questioninfo(pid,uid,theaid,voteCnt,ansCnt) AS
     SELECT DISTINCT questions.pid,poster,qinfo.theaid, voteCnt, ansCnt
