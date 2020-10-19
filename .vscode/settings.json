@@ -5,6 +5,12 @@
             "driver": "SQLite",
             "name": "CMPUT 291",
             "database": "${workspaceFolder:CMPUT}/CMPUT-291/Assignment2/official/assignment2.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "lab quiz",
+            "database": "${workspaceFolder:CMPUT}/CMPUT-291/LAB/lab quiz/lab.db"
         }
     ]
 }
