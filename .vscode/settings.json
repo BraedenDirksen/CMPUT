@@ -4,6 +4,9 @@
             "previewLimit": 50,
             "driver": "SQLite",
             "name": "CMPUT 291",
+<<<<<<< HEAD
+            "database": "${workspaceFolder:CMPUT}/CMPUT-291/Assignment2/official/a2.db"
+=======
             "database": "${workspaceFolder:CMPUT}/CMPUT-291/Assignment2/official/assignment2.db"
         },
         {
@@ -11,6 +14,7 @@
             "driver": "SQLite",
             "name": "lab quiz",
             "database": "${workspaceFolder:CMPUT}/CMPUT-291/LAB/lab quiz/lab.db"
+>>>>>>> 1fff24f400dd1c95ba3a257ded47891ada3b6dd5
         }
     ]
 }

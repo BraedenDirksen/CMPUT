@@ -1,3 +1,4 @@
+.print Question 1 - bdirksen
 --complete and working
 SELECT uid
 FROM ubadges, badges

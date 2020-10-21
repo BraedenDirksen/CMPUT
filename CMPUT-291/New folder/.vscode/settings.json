@@ -1,0 +1,16 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "CMPUT 291",
+            "database": "test.db"
+        },
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "midterm",
+            "database": "${workspaceFolder:New folder}/database.db"
+        }
+    ]
+}

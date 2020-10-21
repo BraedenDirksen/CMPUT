@@ -1,3 +1,5 @@
+.print Question 6 - bdirksen
+--complete and working correctly
 SELECT DISTINCT tags.tag, vote_amount, post_amount
     FROM tags
     LEFT JOIN(select DISTINCT tag, COUNT(*) as vote_amount from votes, tags
